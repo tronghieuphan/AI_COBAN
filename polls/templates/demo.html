@@ -1,0 +1,64 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="stylesheet"
+            href="https://pyscript.net/latest/pyscript.css"
+        />
+        <title>Phân tích văn bản tiếng việt</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css.css' %} " />
+    </head>
+    <body>
+        <div class="header">
+            <div class="title d-block">
+                <div class="text">
+                    PHÂN LOẠI NỘI DUNG VĂN BẢN <br />TIẾNG VIỆT
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="content">
+            <div class="left">
+                <div class="label">
+                    <div class="text-label">NHẬP NỘI DUNG VĂN BẢN</div>
+                </div>
+                <form action="" method="post">
+                    <div class="text">
+                        <textarea
+                            class="text-area"
+                            name="message"
+                            id="message"
+                            cols="78"
+                            rows="7"
+                            placeholder="Bạn muốn viết cái gì nào ?"
+                            style="height: 188px; width: 629px"
+                        ></textarea>
+                    </div>
+                    <input type="file" class="file" />
+                    <div style="text-align: center">
+                        <div class="wrap">
+                            <button class="button" type="submit">
+                                Kiểm tra
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <br />
+                <br />
+                <br />
+            </div>
+            <div class="right">
+                <div class="box">
+                    <div class="label-text">
+                        Nội dung văn bản<br />thuộc thể loại:
+                    </div>
+                    <div class="result">{{response}}</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
